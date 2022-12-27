@@ -1,0 +1,117 @@
+:root {
+  /* Primary Colors */
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  /* Neutral Colors */
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: var(--Cream);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 550px;
+  height: 450px;
+  background-color: white;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.container .image {
+  width: 50%;
+}
+.container .image img {
+  width: 100%;
+  height: 100%;
+}
+.container .content {
+  width: 50%;
+  padding: 30px;
+  background-color: var(--White);
+}
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    margin: 20px;
+    height: 640px;
+    width: 600px;
+  }
+  .container .image,
+  .container .content {
+    width: 100%;
+  }
+  .container .image {
+    height: 40%;
+  }
+  .container .content {
+    padding: 15px;
+  }
+}
+.container .content .header {
+  color: var(--Dark-grayish-blue);
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+.container .content h2 {
+  width: 70%;
+  color: var(--Very-dark-blue);
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.container .content p {
+  color: var(--Dark-grayish-blue);
+  line-height: 1.5;
+}
+.container .content .price {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .content .price span:first-of-type {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--Dark-cyan);
+}
+.container .content .price span:last-of-type {
+  color: var(--Dark-grayish-blue);
+  text-decoration: line-through;
+  font-size: 13px;
+}
+.container .content .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Dark-cyan);
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.container .content .footer:hover {
+  background-color: hsl(158deg 31% 17%);
+}
+
+.container .content a {
+  display: block;
+  text-decoration: none;
+  color: var(--White);
+  margin-left: 10px;
+}
+
+.container .content .footer i {
+  color: var(--White);
+}
